@@ -1,0 +1,25 @@
+{
+  "name": "pesto/yii2-variable",
+  "type": "yii2-extension",
+  "description": "A simple solution for the storage of variables in the database",
+  "keywords": ["yii2", "variable"],
+  "license": "none",
+  "support": {
+    "issues": "https://github.com/Pesto-kun/yii2-variable/issues",
+    "source": "https://github.com/Pesto-kun/yii2-variable"
+  },
+  "authors": [
+    {
+      "name": "Viktor Kislyak",
+      "email": "pest11s@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "pesto\\variable\\": ""
+    }
+  }
+}
