@@ -3,7 +3,6 @@
 namespace pesto\variable\models;
 
 use Yii;
-use yii\helpers\Json;
 
 /**
  * This is the model class for table "variables".

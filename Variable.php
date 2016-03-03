@@ -24,7 +24,7 @@ class Variable extends Component {
         $model = \pesto\variable\models\Variable::findOne($name);
 
         if(!$model) {
-            $model = new self;
+            $model = new \pesto\variable\models\Variable();
             $model->name = $name;
         }
         if(is_array($value)) {
