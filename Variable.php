@@ -54,8 +54,8 @@ class Variable extends Component {
             /** @var \pesto\variable\models\Variable $model */
             $model = \pesto\variable\models\Variable::findOne($name);
             if(isset($model->value)) {
-                if($json = Json::decode($model->value)) {
-                    $this->data[$name] = $json;
+                if($this->isJSON($model->value)) {
+                    $this->data[$name] = Json::decode($model->value);
                 } else {
                     $this->data[$name] = $model->value;
                 }
@@ -65,5 +65,17 @@ class Variable extends Component {
         }
 
         return $this->data[$name];
+    }
+
+    /**
+     * Проверка, является ли значение JSON строкой
+     *
+     * @param $string
+     *
+     * @return bool
+     */
+    public function isJSON($string) {
+        json_decode($string);
+        return (json_last_error()===JSON_ERROR_NONE);
     }
 }
